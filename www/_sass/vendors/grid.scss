@@ -132,7 +132,12 @@ breakpoints: bp1 = 320px, bp2 = 1140px
     .fotobox{width: 100%;}
     .verdwijn{display: none; opacity: 0;}
     .maps_detail{width: 100%;}
-    
+    .tekst_gradenwit{  margin-left: 83%; margin-top: -5%;}
+    .tekst_gradenzwart{  margin-left: 65%; margin-top: -14%;}
+    .weerpic{  margin-top: -10%;}
+
+    #zon{  margin-top: -35%;}
+
     #veldstraat{display: none; opacity: 0;}
 
     #positie_contacttekst{margin: 10% 20%;}
@@ -184,7 +189,12 @@ breakpoints: bp1 = 320px, bp2 = 1140px
     .verdwijn{display: block; opacity: 1;}
     .maps_detail{float: right; margin-top: -11%; width: 50%;}
     .meer_margin{margin-top: -15%}
+    .tekst_gradenwit{  margin-left: 72%; margin-top: -3%;}
+    .tekst_gradenzwart{  margin-left: 65%; margin-top: -4%;}
+    .weerpic{  margin-top: -6%;}
     
+
+    #zon{  margin-top: -15%;}
     #veldstraat{display: block; opacity: 1;}
     #map{opacity: 1;}
     #positie_contacttekst{margin-left: 15%; margin-top: 10%; margin-bottom: 10%; width: 25%; position: absolute;}
