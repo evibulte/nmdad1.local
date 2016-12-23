@@ -1,0 +1,125 @@
+.winkelnaam{
+    font-family: Mangal;
+    font-size: 30px;
+    margin-left: 55%;
+    margin-top: 23%;
+}
+
+.naam{
+    font-family: Mangal;
+    font-size: 30px;
+    margin-left: 55%;
+    margin-top: 20.5%;
+}
+.banknaam{
+    font-family: Mangal;
+    font-size: 30px;
+    margin-left: 55%;
+    margin-top: 21.7%;
+}
+
+.knopjes_div{
+    height: 15px;
+    margin-left: 9%;
+    padding-bottom: -10%;
+    padding-top: 5%;
+}
+
+.knopjes{
+    padding: 8px;
+    color: $achtergrond;
+    font-family: HP Simplified;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.foto_winkels{
+    display: block;
+    float: left;
+}
+
+.openingsuren{
+    font-family: Nirmala UI;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 3px;
+    width: 5%;
+    margin-left: 70%;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.knopje{
+    font-family: Nirmala UI;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 2px;
+    position: absolute;
+    width: 5%;
+    margin-left: 50%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.fotobox{
+    margin-top: -15%;
+}
+
+.roze_acht{
+    background-color: $roze;
+    border: 2px solid $lichtroze;
+}
+
+.groen_acht{
+    background-color: $groen;
+    border: 2px solid $lichtgroen;
+}
+
+.oranje_acht{
+    background-color: $oranje;
+    border: 2px solid $lichtoranje;
+}
+
+.roze{
+    color: $roze;
+}
+
+.groen{
+    color: $groen;
+}
+
+.oranje{
+    color: $oranje;
+}
+
+.lichtroze{
+    color: $lichtroze;
+}
+
+.lichtgroen{
+    color: $lichtgroen;
+}
+
+.lichtoranje{
+    color: $lichtoranje;
+}
+
+#banken{
+    color: $groen;
+}
+
+#winkeldata{
+    height: 100%;
+    margin-top: -15%;
+}
+
+#veldstraat{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 15px;
+}

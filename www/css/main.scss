@@ -1,0 +1,35 @@
+---
+---
+@charset "UTF-8";
+// Import partials from 'sass_dir' (defaults to '_sass')
+
+// The 7-1 Pattern (http://sass-guidelin.es/#the-7-1-pattern)
+
+// 1. Configuration and helpers
+@import
+        'abstracts/variables.scss',
+        'abstracts/functions.scss',
+        'abstracts/mixins.scss',
+        'abstracts/placeholders.scss';
+
+// 2. Vendors
+@import
+        'vendors/grid.scss';
+// 3. Base stuff
+@import
+        'base/base.scss';
+
+// 4. Layout-related sections
+
+// 5. Components
+
+// 6. Page-specific styles
+@import
+        'pages/home.scss',
+        'pages/hoofdpagina.scss',
+        'pages/detailpagina.scss',
+        'pages/titelpagina.scss';
+
+
+// 7. Themes
+

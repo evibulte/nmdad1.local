@@ -1,0 +1,295 @@
+*{margin: 0; padding: 0;}
+
+
+.option {
+  display: block;
+  width: 150px;
+  height: 100px;
+  margin-top: 0;
+  font-family: Mangal;
+  font-size: 18px;
+  font-weight: bold;
+  color: $achtergrond;
+  text-align: center;
+}
+
+.option:hover{
+  opacity: 0.6;
+}
+
+.centreer_tekst{
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
+.uitstap_vakken{
+  font-family: Mangal;
+  font-size: 45px;
+  text-align: center;
+}
+
+.vakken_uitstapjes{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  height: 96.5vh;
+}
+
+.logo{
+  margin-top: 230px;
+  height: 30%;
+}
+
+.vakken_uitstapjes:hover{
+  .logo{height: 40%;}
+}
+
+.tekst_uitstapjes{
+  margin-top: 100px;
+}
+
+.tekst{
+  font-family: Nirmala UI;
+  font-weight: 500;
+  font-size: 20px;
+  color: #31302f;
+}
+
+.margintop_zero{
+  margin-top: 0;
+}
+
+.marginbottom_zero{
+  margin-bottom: 0;
+}
+
+.hoofdpagina_titel{
+  font-family: HP Simplified;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.contacttitels{
+  font-family: Nirmala UI;
+  font-weight: bold;
+  font-size: 25px;
+  color: #31302f;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.option_blue{
+  background-color: $blauw;
+  border: 3px solid $lichtblauw;
+}
+
+.option_pink{
+  background-color: $roze;
+  border: 3px solid $lichtroze;
+}
+
+.option_orange{
+  background-color: $oranje;
+  border: 3px solid $lichtoranje;
+}
+
+.option_green{
+  background-color: $groen;
+  border: 3px solid $lichtgroen;
+}
+
+.roze{
+  float: right;
+  margin-right: 15px;
+  margin-top: -50px;
+}
+
+.groen{
+  float: right;
+  margin-right: 15px;
+  margin-top: -50px;
+}
+
+.oranje{
+  float: right;
+  margin-right: 15px;
+  margin-top: -50px;
+}
+
+.alles_weer{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.groot_vak_weer{
+  background-color: $groen;
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  margin-top: 60px;
+  
+}
+
+.klein_vak_weer{
+  background-color: $lichtgroen;
+  width: 60%;
+  height: 70px;
+  margin-left: 0;
+  margin-top: 60px;
+  
+}
+
+.tekst_gradenwit{
+  color: white;
+  font-family: Nirmala UI;
+  font-size: 25px;
+  margin-left: 72%;
+  margin-top: -3%;
+}
+
+.tekst_gradenzwart{
+  color: $grijs;
+  font-family: Nirmala UI;
+  font-size: 25px;
+  margin-left: 65%;
+  margin-top: -4%;
+}
+
+.tekst_weer {
+  margin-left: 15%;
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: Nirmala UI;
+  font-weight: bold;
+  font-size: 40px;
+  width: 30%;
+}
+
+.tekst_weer2 {
+  margin-left: 5%;
+  padding-top: 10px;
+  color: $groen;
+  font-family: Nirmala UI;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.weerpic{
+  margin-left: 80%;
+  margin-top: -6%;
+}
+
+#tekst_info{
+  margin-left: 10%;
+  margin-right:10%;
+  margin-top: 35px;
+  width: 75%;
+  height: 20%; 
+  
+}
+
+#zon{
+  margin-left: 60%;
+  margin-top: -15%;
+}
+
+#map {
+  display: block;
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 5%;
+  margin-top: 7%;
+  margin-bottom: 20%;
+}
+
+#titel{
+  font-family: Agency FB;
+  font-size: 65px;
+  color: $oranje;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#ondertitel{
+  font-family: Nirmala UI;
+  font-size: 25px;
+  color: $lichtoranje;
+  font-weight: bold;
+}
+
+#info_titel{
+  color: $roze;
+}
+
+#contact_titel{
+  color: $oranje;
+}
+
+#weer_titel{
+  color: $groen;
+}
+
+#restaurants_vak{
+  margin-top: 100px;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  color: $oranje;
+}
+
+#kledingwinkels_vak{
+  margin-top: 100px;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  color: $roze;
+}
+
+#banken_vak{
+  margin-top: 100px;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  color: $groen;
+}
+
+#restaurants_kleur{
+  background-color: $lichtoranje;
+}
+
+
+#kledingwinkels_kleur{
+  background-color: $lichtroze ;
+}
+
+#banken_kleur{
+  background-color: $lichtgroen ;
+}
+
+#restaurants_kleur:hover, #kledingwinkels_kleur:hover, #banken_kleur:hover{
+    background-color: $achtergrond;
+}
+
+#uitstapjes_titel{
+  color: $blauw;
+}
+
+#banken_titel{
+  color: $groen;
+}
+
+#kledingwinkels_titel{
+  color: $roze;
+}
+
+#restaurants_titel{
+  color: $oranje;
+}
+
+#uitstapjes_homebutton{
+  margin-top: 5px;
+}

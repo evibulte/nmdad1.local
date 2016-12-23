@@ -1,0 +1,54 @@
+.container_detail{
+    width: 95%;
+    margin: auto;
+}
+
+.foto_pagina{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.info_detail{
+    margin-top: 3%;
+    text-align: left;
+    width: 100%;
+    height: 50%;
+}
+
+.info_bold{
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.margin_onder{
+    margin-bottom: 10px;
+}
+
+.maps_detail{
+    height: 35vh;
+}
+
+#bold_oranje{
+    color: $oranje;
+}
+
+#bold_groen{
+    color: $groen;
+}
+
+#bold_roze{
+    color: $roze;
+}
+
+#rand_roze{
+    border: 2px solid $lichtroze;
+}
+
+#rand_oranje{
+    border: 2px solid $lichtoranje;
+}
+
+#rand_groen{
+    border: 2px solid $lichtgroen;
+}

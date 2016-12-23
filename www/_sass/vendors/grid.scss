@@ -1,0 +1,200 @@
+/**
+Wrapper, container, row.
+*/
+
+ .grid__wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.grid__container {
+    display: block;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.grid__row {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+}
+
+.grid__wrapper:after,
+.grid__container:after,
+.grid__row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**
+Kolommen
+*/
+
+.grid__column {
+    position: relative;
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+.grid__bp1-column-12,
+.grid__bp1-column-11,
+.grid__bp1-column-10,
+.grid__bp1-column-9,
+.grid__bp1-column-8,
+.grid__bp1-column-7,
+.grid__bp1-column-6,
+.grid__bp1-column-5,
+.grid__bp1-column-4,
+.grid__bp1-column-3,
+.grid__bp1-column-2,
+.grid__bp1-column-1, 
+.grid__bp2-column-12,
+.grid__bp2-column-11,
+.grid__bp2-column-10,
+.grid__bp2-column-9,
+.grid__bp2-column-8,
+.grid__bp2-column-7,
+.grid__bp2-column-6,
+.grid__bp2-column-5,
+.grid__bp2-column-4,
+.grid__bp2-column-3,
+.grid__bp2-column-2,
+.grid__bp2-column-1{
+    position: relative;
+    float: left;
+    padding: 0;
+}
+
+/**
+Development, Grid
+*/
+.grid__development .grid__wrapper {
+    background: rgba(255, 0, 0, 0.4);
+}
+.grid__development .grid__container {
+    background: rgba(0, 255, 0, 0.4);
+}
+.grid__development .grid__row {
+    background: rgba(0, 0, 255, 0.4);
+}
+.grid__development *[class*="grid__column-"] {
+    background: rgba(255, 255, 0, 0.4);
+    height: 64px;
+    margin-bottom: 12px;
+
+    text-align: center;
+    line-height: 64px;
+}
+.grid__development *[class*="grid__column-"] > * {
+    background: rgba(255, 0, 255, 0.4);
+}
+
+/**
+Media Queries.
+breakpoints: bp1 = 320px, bp2 = 1140px
+*/
+@media (min-width: 320px) {
+    .grid__bp1-column-12 { width: 100%; }
+    .grid__bp1-column-11 { width: 91.666666666667%; }
+    .grid__bp1-column-10 { width: 83.333333333333%; }
+    .grid__bp1-column-9 {  width: 75%; }
+    .grid__bp1-column-8 {  width: 66.666666666667%; }
+    .grid__bp1-column-7 {  width: 58.333333333333%; }
+    .grid__bp1-column-6 {  width: 50%; }
+    .grid__bp1-column-5 {  width: 41.666666666667%; }
+    .grid__bp1-column-4 {  width: 33.333333333333%; }
+    .grid__bp1-column-3 {  width: 25%; }
+    .grid__bp1-column-2 {  width: 16.666666666667%; }
+    .grid__bp1-column-1 {  width: 8.333333333333%; }
+
+    .grid__bp1-offset-12 { margin-left: 100%; }
+    .grid__bp1-offset-11 { margin-left: 91.666666666667%; }
+    .grid__bp1-offset-10 { margin-left: 83.333333333333%; }
+    .grid__bp1-offset-9 {  margin-left: 75%; }
+    .grid__bp1-offset-8 {  margin-left: 66.666666666667%; }
+    .grid__bp1-offset-7 {  margin-left: 58.333333333333%; }
+    .grid__bp1-offset-6 {  margin-left: 50%; }
+    .grid__bp1-offset-5 {  margin-left: 41.666666666667%; }
+    .grid__bp1-offset-4 {  margin-left: 33.333333333333%; }
+    .grid__bp1-offset-3 {  margin-left: 25%; }
+    .grid__bp1-offset-2 {  margin-left: 16.666666666667%; }
+    .grid__bp1-offset-1 {  margin-left: 8.333333333333%; }
+
+    .grid__bp1-height {height: 100%;}
+    .option {margin-left: 0; }
+    .foto_winkels{margin-top: 0; margin-bottom: 0;}
+    .openingsuren{display: none;}
+    .knopje{display: none;}
+    .fotobox{width: 100%;}
+    .verdwijn{display: none; opacity: 0;}
+    .maps_detail{width: 100%;}
+    
+    #veldstraat{display: none; opacity: 0;}
+
+    #positie_contacttekst{margin: 10% 20%;}
+    
+    #map{display: none; opacity: 0;}
+
+    #winkeldata{width: 100%;}
+    
+    .grid__development .grid__wrapper:before {
+        content: "Breakpoint 1: 320 to 1140px";
+    }
+}
+
+@media (min-width: 1140px) {
+    .grid__bp2-column-12 { width: 100%; }
+    .grid__bp2-column-11 { width: 91.666666666667%; }
+    .grid__bp2-column-10 { width: 83.333333333333%; }
+    .grid__bp2-column-9 {  width: 75%; }
+    .grid__bp2-column-8 {  width: 66.666666666667%; }
+    .grid__bp2-column-7 {  width: 58.333333333333%; }
+    .grid__bp2-column-6 {  width: 50%; }
+    .grid__bp2-column-5 {  width: 41.666666666667%; }
+    .grid__bp2-column-4 {  width: 33.333333333333%; }
+    .grid__bp2-column-3 {  width: 25%; }
+    .grid__bp2-column-2 {  width: 16.666666666667%; }
+    .grid__bp2-column-1 {  width: 8.333333333333%; }
+
+    .grid__bp2-offset-12 { margin-left: 100%; }
+    .grid__bp2-offset-11 { margin-left: 91.666666666667%; }
+    .grid__bp2-offset-10 { margin-left: 83.333333333333%; }
+    .grid__bp2-offset-9 {  margin-left: 75%; }
+    .grid__bp2-offset-8 {  margin-left: 66.666666666667%; }
+    .grid__bp2-offset-7 {  margin-left: 58.333333333333%; }
+    .grid__bp2-offset-6 {  margin-left: 50%; }
+    .grid__bp2-offset-5 {  margin-left: 41.666666666667%; }
+    .grid__bp2-offset-4 {  margin-left: 33.333333333333%; }
+    .grid__bp2-offset-3 {  margin-left: 25%; }
+    .grid__bp2-offset-2 {  margin-left: 16.666666666667%; }
+    .grid__bp2-offset-1 {  margin-left: 8.333333333333%; }
+
+    .grid__bp2-height {height: 5%;}
+    .option {  float: left; margin-left: 10px;}
+    .buitenkant_navbar{margin-right: 20%; margin-left: 29%;}
+    .sidebar-nav{display: none;}
+    .openingsuren{display: block;}
+    .foto_winkels{margin-bottom: 10%; margin-top: 2%; margin-left: 30%;}
+    .knopje{display: block;}
+    .fotobox{width: 30%;}
+    .verdwijn{display: block; opacity: 1;}
+    .maps_detail{float: right; margin-top: -11%; width: 50%;}
+    .meer_margin{margin-top: -15%}
+    
+    #veldstraat{display: block; opacity: 1;}
+    #map{opacity: 1;}
+    #positie_contacttekst{margin-left: 15%; margin-top: 10%; margin-bottom: 10%; width: 25%; position: absolute;}
+    #winkeldata{width: 90%;}
+  
+
+    .grid__bp2-display {display: none;}
+    .grid__bp2-naast_elkaar {position: left;}
+    
+    .grid__development .grid__wrapper:before {
+        content: "Breakpoint 2: 1140px and up";
+    }
+}
