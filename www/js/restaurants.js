@@ -1,6 +1,46 @@
- var restaurant = document.getElementById("restaurantdata");
+var restaurant = document.getElementById("restaurantdata");
 
+;(function() {
 
+  function Restaurants(id, parentContainer) {
+    this.API_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurant+in+de+buurt+van+Veldstraat,+Gent&key=AIzaSyDOy_hGZ2uBDsKmUBzSlq1w5Sm4VBBokc0';
+    this.id = id;
+    this.parentContainer = parentContainer;
+    this.results;
+
+    this.loadData = function() {
+      var that = this;
+
+      Utils.getJSONPByPromise(this.API_URL).then(
+        function(data) {
+          that.results = data.query.results;
+          that.updateUI();
+        },
+        function(error) {
+          console.log(error);
+        }
+      );
+
+    };
+
+    this.updateUI = function() {
+      var name = this.results.name;
+
+      console.log(this.results);
+    };
+
+    this.toString = function() {
+      return `Restaurant widget with id: ${this.id}`;
+    };
+
+  };
+
+  var ww1 = new Restaurants(1, document.querySelector('.sidebar'));
+  ww1.loadData();
+  console.log(ww1.toString());
+
+})();
+/*
 ;(function() {
 
   function Restaurants(id, parentContainer) {
@@ -53,7 +93,7 @@
   console.log(ww1.toString());
 
 })();
-
+*/
 
 
 

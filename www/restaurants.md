@@ -13,7 +13,7 @@ title : "New Media Design & Development I"
 
 <div class='knopjes_div'>
 <a href='#'><button class='knopjes oranje_acht'>A-Z</button></a>
-<a href='#'><button class='knopjes oranje_acht'>Z-A</button></a>
+<a href='#'><button class='knopjes oranje_acht'>Z-A</button></a> 
 </div>
 
 <div id='restaurantdata'>
