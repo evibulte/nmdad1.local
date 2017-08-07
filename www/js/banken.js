@@ -1,17 +1,17 @@
- var bank = document.getElementById("banken");
+var bank = document.getElementById("banken");
+var xhr = new XMLHttpRequest();
 
 
 ;(function() {
 
   function Banken(id, parentContainer) {
-    this.API_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=bank+in+de+buurt+van+Veldstraat,+Gent&key=AIzaSyDOy_hGZ2uBDsKmUBzSlq1w5Sm4VBBokc0';
+    this.API_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=bank+in+de+buurt+van+Veldstraat,+Gent&key=AIzaSyClt78KgGA6NmJ6ga6bDEDKdqqQhsd-GOc';
     this.id = id;
     this.parentContainer = parentContainer;
 
     this.loadData = function() {
       var that = this;
-
-      var xhr = new XMLHttpRequest();
+      
       xhr.open('get', this.API_URL, true);
       xhr.responseType = 'json';
       xhr.onload = function() {
@@ -22,8 +22,13 @@
       
     var htmlString = "";
 
-    for (i = 0; i < 7; i++){
-        htmlString += "<p class='banknaam lichtgroen'>" + query[i].name + "</p><p class='tekst' id='veldstraat'>Dit is een bank in de buurt van de Veldstraat.</p><a href='bank.html'><button class='knopje groen_acht' type='button'>Details</button></a>";
+    for (var i=0;i<query.length;i++){
+        if(query[i].photos){  
+                    htmlString += "<div class='content_paginas'>"
+                    htmlString += "<div class='naam_div'><p class='naam lichtgroen'>" + query[i].name + "</p></div><p class='tekst verdwijn' id='veldstraat'>Dit is een bank in de buurt van de Veldstraat.</p><div class='detail_div'><a href='bank.html'><button class='knopje groen_acht' type='button'>Details</button></a></div>";
+                    htmlString += "<div id='rand_groen' class='foto_div'><a href='bank.html'><img src='https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + query[i].photos[0].photo_reference + "&key=AIzaSyClt78KgGA6NmJ6ga6bDEDKdqqQhsd-GOc' alt='foto van de bank'></a></div>";
+                    htmlString += "</div>"
+        }
     }
 
     bank.insertAdjacentHTML('beforeend', htmlString) ;

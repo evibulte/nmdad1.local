@@ -1,93 +1,72 @@
-var weer_datum = document.getElementById("datum_weer");
-var weer_datum1 = document.getElementById("weerdag1");
-var weer_datum2 = document.getElementById("weerdag2");
-var weer_datum3 = document.getElementById("weerdag3");
-var weer_datum4 = document.getElementById("weerdag4");
-var weer_datum5 = document.getElementById("weerdag5");
-var weer_datum6 = document.getElementById("weerdag6");
+var graden_dag1 = document.getElementById('dag1graden');
+var graden_anderedagen = document.getElementById('weer_dagen');
+var htmlString = '';
+var xhr = new XMLHttpRequest();
 
-function getFormattedDate(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var month = new Array('Januarie', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December');
-    var day  = week[today.getDay()];
-    var dd   = today.getDate();
-    var mm   = month[today.getMonth()]; 
+(function() {
 
-    if(dd<10)  { dd='0'+dd } 
-    if(mm<10)  { mm='0'+mm } 
+  function weer(id, parentContainer) {
+    this.API_URL = 'http://api.openweathermap.org/data/2.5/forecast?q=Gent,be&mode=json&APPID=881d75ee48f750505d02e5ca8bece4c8';
+    this.id = id;
+    this.parentContainer = parentContainer;
 
-    return '<p>'+day+'</p><p>'+dd+'</p><p>'+mm+'</p>';
-}
+    this.loadData = function() {
+      var that = this;
 
-function dag1(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var day  = week[today.getDay() + 1];
+      xhr.open('get', this.API_URL, true);
+      xhr.responseType = 'json';
+      xhr.onload = function() {
+        if(xhr.status == 200) {
+            var data = (!xhr.responseType)?JSON.parse(xhr.response):xhr.response;
+            var query = data.list;
+            
+            var gradendag1 = Math.round(query[0].main.temp-273.15).toFixed(1) + '°C';
+            graden_dag1.insertAdjacentHTML('beforeend', gradendag1) ;
 
-    return '<p>'+day+'</p>';
-}
+                    function foto(){
+                        if(graden < 15){
+                        return "<img src='images/wolk.png'";
+                        }else{
+                            return "<img src='images/zon_zwart.png'";
+                        }
+                    };
+                    
+            for (var i=1;i<7;i++){
 
-function dag2(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var day  = week[today.getDay()+2];
+                    var graden = Math.round(query[i].main.temp-273.15).toFixed(1);
 
-    return '<p>'+day+'</p>';
-}
+                    htmlString += "<div class='klein_vak_weer weerdata'>"
+                    htmlString += "<div class='tekst_weer2' id='weerdag'>" + dag() + "</div>";
+                    htmlString += "</div>";
+                    htmlString += foto() + " width='90px' class='weerpic'>";
+                    htmlString += "<p class='tekst_gradenzwart'>" + graden + "°C</p>";
+            }
+              graden_anderedagen.insertAdjacentHTML("beforeend", htmlString) ;
 
-function dag3(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var day  = week[today.getDay()+3];
+        } else {
+          console.log('ERROR');
+        }
+      }
+      xhr.onerror = function() {
+        console.log('ERROR');
+      }
+      xhr.send();
+    };
 
-    return '<p>'+day+'</p>';
-}
+    this.updateUI = function() {
 
-function dag4(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var day  = week[today.getDay()+4];
+    };
 
-    return '<p>'+day+'</p>';
-}
+    this.toString = function() {
+      return `Weather with id: ${this.id}`;
+    };
 
-function dag5(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var day  = week[today.getDay()+5];
+  };
 
-    return '<p>'+day+'</p>';
-}
+  var ww1 = new weer(1, document.querySelector('.sidebar'));
+  ww1.loadData();
+  console.log(ww1.toString());
 
-function dag6(today) 
-{
-    var week = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag');
-    var day  = week[today.getDay()+6];
-
-    return '<p>'+day+'</p>';
-}
-
-
-
-var date = new Date();
-var text = getFormattedDate(date);
-var text1 = dag1(date);
-var text2 = dag2(date);
-var text3 = dag3(date);
-var text4 = dag4(date);
-var text5 = dag5(date);
-var text6 = dag6(date);
-
-
-weer_datum.insertAdjacentHTML('beforeend', text) ;
-weer_datum1.insertAdjacentHTML('beforeend', text1) ;
-weer_datum2.insertAdjacentHTML('beforeend', text2) ;
-weer_datum3.insertAdjacentHTML('beforeend', text3) ;
-weer_datum4.insertAdjacentHTML('beforeend', text4) ;
-weer_datum5.insertAdjacentHTML('beforeend', text5) ;
-weer_datum6.insertAdjacentHTML('beforeend', text6) ;
-
-
+})();
 
 

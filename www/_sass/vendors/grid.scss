@@ -129,22 +129,36 @@ breakpoints: bp1 = 320px, bp2 = 1140px
     .foto_winkels{margin-top: 0; margin-bottom: 0;}
     .openingsuren{display: none;}
     .knopje{display: none;}
-    .fotobox{width: 100%;}
     .verdwijn{display: none; opacity: 0;}
-    .maps_detail{width: 100%;}
-    .tekst_gradenwit{  margin-left: 83%; margin-top: -5%;}
+    .tekst_gradenwit{  margin-left: 83%; margin-top: -7%;}
     .tekst_gradenzwart{  margin-left: 65%; margin-top: -14%;}
-    .weerpic{  margin-top: -10%;}
+    .weerpic{  margin-top: -11%;}
+    .foto_div{width: 100%; height: 150px; margin:0; position: absolute;}
+    .foto_div img{width: 100%; margin: 0;}
+    .content_paginas{opacity: 0.8; height: 150px; position: relative;}
+    .naam_div{z-index: 999; top: 48px; left: 12%; width: 75%; height:50px; text-align: center; opacity: 0.8; margin: 0; position: absolute; vertical-align: middle;}
+    .naam{padding: 10px; width: 100%; height:50px; font-size: 45px; margin: 0; line-height: 50px;}
+    .lichtroze{background-color: $roze; color: $achtergrond;}
+    .lichtgroen{background: $groen; color: $achtergrond;}
+    .lichtoranje{background: $oranje; color: $achtergrond;}
+    .data{margin: 0 auto; margin-top: 0;}
+    .vakken_uitstapjes{height: 250px;}
+    .logo{margin-left: 40px; margin-top: -90px; height: 40%; float: left;}
+    .vakken_uitstapjes:hover{
+        .logo{height: 50%;}
+    }
+    .tekst_uitstapjes{margin-top: 90px; margin-left: 90px;}
+    .dunneafbeelding{height: 200px;}
+    .home {padding-top: 45%;}
+    .tekst_weer2{padding-bottom: 8.2vh;}
 
-    #zon{  margin-top: -35%;}
-
+    #zon{  margin-top: -38%; margin-left: 48%;}
     #veldstraat{display: none; opacity: 0;}
+    #positie_contacttekst{margin: 10% 20%; width: 25%;}
+    #map{width: 0px; overflow: hidden;}
 
-    #positie_contacttekst{margin: 10% 20%;}
-    
-    #map{display: none; opacity: 0;}
-
-    #winkeldata{width: 100%;}
+    .openingsuren, .detail_div, #map{display: none; opacity: 0;}
+    .fotobox, .data, .content_paginas, .maps_detail, .map_div, #winkeldata, #restaurantdata, #banken{width: 99.6%;}
     
     .grid__development .grid__wrapper:before {
         content: "Breakpoint 1: 320 to 1140px";
@@ -180,25 +194,48 @@ breakpoints: bp1 = 320px, bp2 = 1140px
 
     .grid__bp2-height {height: 5%;}
     .option {  float: left; margin-left: 10px;}
-    .buitenkant_navbar{margin-right: 20%; margin-left: 29%;}
+    .buitenkant_navbar{margin: 0 auto;}
     .sidebar-nav{display: none;}
     .openingsuren{display: block;}
     .foto_winkels{margin-bottom: 10%; margin-top: 2%; margin-left: 30%;}
     .knopje{display: block;}
+    .detail_div{padding-left: 50%;}
     .fotobox{width: 30%;}
     .verdwijn{display: block; opacity: 1;}
-    .maps_detail{float: right; margin-top: -11%; width: 50%;}
-    .meer_margin{margin-top: -15%}
+    .map_div{float: right; padding-top: 0; margin-top: -15%; display: block; width: 50%;}
+    .maps_detail{margin: 0; padding: 0; display: block;}
+    .meer_margin{margin-top: -15%;}
     .tekst_gradenwit{  margin-left: 72%; margin-top: -3%;}
     .tekst_gradenzwart{  margin-left: 65%; margin-top: -4%;}
-    .weerpic{  margin-top: -6%;}
-    
+    .weerpic{  margin-top: -7%;}
+    .tekst_uitstapjes{margin: 0; margin-top: 100px; padding:0; padding-top: 50px;}
+    .naam{padding:0; padding-left: 49.8%; font-size: 30px; width: auto; height: auto; margin: 0;}
+    .naam_div{height: auto; text-align: left; position: static; opacity: 1.0; margin: auto;}
+    .foto_div img {width: 450px;}
+    .foto_div{width: 450px; height: 250px; margin-left: 70px; margin-top: -100px; margin-bottom: 20px;position: static;}
+    .content_paginas{opacity: 1; width: 95%; height: 100%;position: static;}  
+    .data{margin: 0 auto; margin-top: 30px;}
+    .lichtroze{background: none; color: $lichtroze;}
+    .lichtgroen{background: none; color: $lichtgroen;}
+    .lichtoranje{background: none; color: $lichtoranje;}
+    .vakken_uitstapjes{height: 96.5vh;}
+    .logo{margin-top: 230px;height: 30%; float: none;}
+    .vakken_uitstapjes:hover{
+        .logo{height: 40%;}
+    }
+    .dunneafbeelding{height: 400px;}
+    .map_bank{margin-top: -11%;}
+    .map_resto{margin-top: -12%;}
+    .navbar{width: 690px;}
+    .home {padding-top: 20%;}
+    .tekst_weer2{padding-bottom: 6.5vh;}
 
-    #zon{  margin-top: -15%;}
-    #veldstraat{display: block; opacity: 1;}
-    #map{opacity: 1;}
+
+    #zon{  margin-top: -15%; margin-left: 60%}
+    .openingsuren, .detail_div, #veldstraat{display: block; opacity: 1;}
+    #map{opacity: 1; width: 600px;}
     #positie_contacttekst{margin-left: 15%; margin-top: 10%; margin-bottom: 10%; width: 25%; position: absolute;}
-    #winkeldata{width: 90%;}
+    #winkeldata, #restaurantdata, #banken{width: 90%;}
   
 
     .grid__bp2-display {display: none;}

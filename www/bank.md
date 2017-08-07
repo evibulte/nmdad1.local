@@ -10,9 +10,9 @@ title : "New Media Design & Development I"
         <img src="images/groen.png" height='25px'>
 </a></div>
 
-<div class='container_detail'>
+<div class='container_detail' id='contentdetail'>
 
-        <img src='images/banken/financial2.jpg' class='foto_pagina' id='rand_groen' width='100%' alt='foto van de Deutsche Bank'>
+        
 
         <div class='info_detail'>
                 <p class='tekst info_bold' id='bold_groen'>Openingsuren</p>
@@ -23,7 +23,7 @@ title : "New Media Design & Development I"
                 <p class='tekst info_bold' id='bold_groen'>Locatie</p>
                 <p class='tekst verdwijn'>Koophandelsplein 11 , 9000 Gent</p>
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.1674105210664!2d3.718984051398833!3d51.0499965517633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c371447cc1e469%3A0xf926fb1c07a26eec!2sKoophandelsplein+11%2C+9000+Gent!5e0!3m2!1snl!2sbe!4v1482420254599" class='maps_detail' id='rand_groen' width="45%" height="50%"></iframe>
+                <div class='map_div map_bank' id='map_divv'></div>
         </div>
 
 </div>

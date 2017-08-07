@@ -11,23 +11,14 @@ title : "New Media Design & Development I"
 </a></div>
 
 <div class='knopjes_div'>
-<a href='#'><button class='knopjes groen_acht'>A-Z</button></a>
-<a href='#'><button class='knopjes groen_acht'>Z-A</button></a>
+<a href='#'><button class='knopjes groen_acht' id='AZ'>A-Z</button></a>
+<a href='#'><button class='knopjes groen_acht' id='ZA'>Z-A</button></a>
 </div>
 
-<div id='banken'>
+<div class='data' id='banken'>
 
-    <div class="fotobox">
-    <img src="images/banken/belfius.JPG" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    <img src="images/banken/center.jpg" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    <img src="images/banken/bernaert.jpg" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    <img src="images/banken/ing.jpg" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    <img src="images/banken/record.jpg" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    <img src="images/banken/ing.jpg" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    <img src="images/banken/record.jpg" id='rand_groen' width="100%" alt="foto van de winkel" class="foto_winkels">
-    </div>
 
 </div>
 
 <script src="js/banken.js"></script>
-
+<script src="js/sorteren.js"></script>

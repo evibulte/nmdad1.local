@@ -13,11 +13,10 @@ title : "New Media Design & Development I"
 
 <div id='restaurantdata'></div>
 
-<div class='container_detail'>
+<div class='container_detail' id='contentdetail'>
 
-        <img src='images/restaurants/lotus2.jpg' class='foto_pagina' id='rand_oranje' width='100%' alt='foto van de Deutsche Bank'>
 
-        <p class='tekst margin_onder'>Chinese keuken boordevol lekkernijen.</p>
+        <p class='tekst margin_onder'>Informatie over het restaurant.</p>
 
         <div class='info_detail'>
                 <p class='tekst info_bold' id='bold_oranje'>Openingsuren</p>
@@ -28,7 +27,7 @@ title : "New Media Design & Development I"
                 <p class='tekst info_bold' id='bold_oranje'>Locatie</p>
                 <p class='tekst verdwijn'>Donkersteeg 11, 9000 Gent</p>
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.9166694637333!2d3.721077451398958!3d51.05462645142687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c37146e4b186df%3A0xf34c1156d3a7f8dc!2sDe+Lotus!5e0!3m2!1snl!2sbe!4v1482422898091" class='maps_detail'  id='rand_oranje' width="45%" height="50%"></iframe>
+                <div class='map_div map_resto' id='map_divv'></div>
         </div>
 </div>
 

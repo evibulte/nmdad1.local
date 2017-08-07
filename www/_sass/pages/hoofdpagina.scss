@@ -1,20 +1,9 @@
 *{margin: 0; padding: 0;}
 
 
-.option {
-  display: block;
-  width: 150px;
-  height: 100px;
-  margin-top: 0;
-  font-family: Mangal;
-  font-size: 18px;
-  font-weight: bold;
-  color: $achtergrond;
-  text-align: center;
-}
-
-.option:hover{
-  opacity: 0.6;
+.sidebar-nav{
+  margin: 10px;
+  text-decoration: none;
 }
 
 .centreer_tekst{
@@ -32,20 +21,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-  height: 96.5vh;
-}
-
-.logo{
-  margin-top: 230px;
-  height: 30%;
-}
-
-.vakken_uitstapjes:hover{
-  .logo{height: 40%;}
-}
-
-.tekst_uitstapjes{
-  margin-top: 100px;
+  display: inline-block;
 }
 
 .tekst{
@@ -79,26 +55,6 @@
   color: #31302f;
   margin-bottom: 0;
   margin-top: 10px;
-}
-
-.option_blue{
-  background-color: $blauw;
-  border: 3px solid $lichtblauw;
-}
-
-.option_pink{
-  background-color: $roze;
-  border: 3px solid $lichtroze;
-}
-
-.option_orange{
-  background-color: $oranje;
-  border: 3px solid $lichtoranje;
-}
-
-.option_green{
-  background-color: $groen;
-  border: 3px solid $lichtgroen;
 }
 
 .roze{
@@ -166,16 +122,22 @@
 }
 
 .tekst_weer2 {
-  margin-left: 5%;
+  margin-left: 7%;
   padding-top: 10px;
   color: $groen;
   font-family: Nirmala UI;
   font-weight: bold;
   font-size: 30px;
+  float: left;
 }
 
 .weerpic{
   margin-left: 80%;
+}
+
+#weerdag{
+  width: 10%;
+  position: absolute;
 }
 
 #tekst_info{
@@ -185,10 +147,6 @@
   width: 75%;
   height: 20%; 
   
-}
-
-#zon{
-  margin-left: 60%;
 }
 
 #map {
@@ -228,26 +186,14 @@
 }
 
 #restaurants_vak{
-  margin-top: 100px;
-  margin: 0;
-  padding: 0;
-  padding-top: 50px;
   color: $oranje;
 }
 
 #kledingwinkels_vak{
-  margin-top: 100px;
-  margin: 0;
-  padding: 0;
-  padding-top: 50px;
   color: $roze;
 }
 
 #banken_vak{
-  margin-top: 100px;
-  margin: 0;
-  padding: 0;
-  padding-top: 50px;
   color: $groen;
 }
 

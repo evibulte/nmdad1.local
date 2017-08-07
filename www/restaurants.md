@@ -12,23 +12,13 @@ title : "New Media Design & Development I"
 </a></div>
 
 <div class='knopjes_div'>
-<a href='#'><button class='knopjes oranje_acht'>A-Z</button></a>
-<a href='#'><button class='knopjes oranje_acht'>Z-A</button></a> 
+<a href='#'><button class='knopjes oranje_acht' id='AZ'>A-Z</button></a>
+<a href='#'><button class='knopjes oranje_acht' id='ZA'>Z-A</button></a> 
 </div>
 
-<div id='restaurantdata'>
-
-    <div class="fotobox">
-    <img src="images/restaurants/pakhuis.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/lotus.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/graslei.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/lepelblad.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/kastart.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/oudclooster.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/twilight.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    <img src="images/restaurants/bridge.jpg" id='rand_oranje' width="100%" alt="foto van het restaurant" class="foto_winkels">
-    </div>
+<div class='data' id='restaurantdata'>
 
 </div>
 
 <script src="js/restaurants.js"></script>
+<script src="js/sorteren.js"></script>

@@ -1,80 +1,41 @@
-var restaurant = document.getElementById("restaurantdata");
-
-;(function() {
-
-  function Restaurants(id, parentContainer) {
-    this.API_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurant+in+de+buurt+van+Veldstraat,+Gent&key=AIzaSyDOy_hGZ2uBDsKmUBzSlq1w5Sm4VBBokc0';
-    this.id = id;
-    this.parentContainer = parentContainer;
-    this.results;
-
-    this.loadData = function() {
-      var that = this;
-
-      Utils.getJSONPByPromise(this.API_URL).then(
-        function(data) {
-          that.results = data.query.results;
-          that.updateUI();
-        },
-        function(error) {
-          console.log(error);
-        }
-      );
-
-    };
-
-    this.updateUI = function() {
-      var name = this.results.name;
-
-      console.log(this.results);
-    };
-
-    this.toString = function() {
-      return `Restaurant widget with id: ${this.id}`;
-    };
-
-  };
-
-  var ww1 = new Restaurants(1, document.querySelector('.sidebar'));
-  ww1.loadData();
-  console.log(ww1.toString());
-
-})();
-/*
-;(function() {
+var xhr = new XMLHttpRequest();
+(function() {
 
   function Restaurants(id, parentContainer) {
-    this.API_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurant+in+de+buurt+van+Veldstraat,+Gent&key=AIzaSyDOy_hGZ2uBDsKmUBzSlq1w5Sm4VBBokc0';
+    this.API_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurant+in+de+buurt+van+Veldstraat,+Gent&key=AIzaSyClt78KgGA6NmJ6ga6bDEDKdqqQhsd-GOc";
     this.id = id;
     this.parentContainer = parentContainer;
 
     this.loadData = function() {
       var that = this;
+      xhr.open("get", this.API_URL, true);
+      xhr.responseType = "json";
 
-      var xhr = new XMLHttpRequest();
-      xhr.open('get', this.API_URL, true);
-      xhr.responseType = 'json';
       xhr.onload = function() {
         if(xhr.status == 200) {
           var data = (!xhr.responseType)?JSON.parse(xhr.response):xhr.response;
           var query = data.results;
+          console.log(query);
+          var htmlString = "";
 
-      
-    var htmlString = "";
 
-    for (i = 0; i < 8; i++){
-        htmlString += "<p class='naam lichtoranje'>" + query[i].name + "</p><p class='tekst' id='veldstraat'>Dit is een restaurant in de buurt van de Veldstraat.</p><a href='resto.html'><button class='knopje oranje_acht' type='button'>Details</button></a>";
-    }
+          for (var i=0;i<query.length;i++){
+              if(query[i].photos){  
+                    htmlString += "<div class='content_paginas'>"
+                    htmlString += "<div class='naam_div'><p class='naam lichtoranje'>" + query[i].name + "</p></div><p class='tekst verdwijn' id='veldstraat'>Dit is een restaurant in de buurt van de Veldstraat.</p><div class='detail_div'><a href='resto.html'><button class='knopje oranje_acht' type='button'>Details</button></a></div>";
+                    htmlString += "<div id='rand_oranje' class='foto_div'><a href='resto.html'><img src='https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + query[i].photos[0].photo_reference + "&key=AIzaSyClt78KgGA6NmJ6ga6bDEDKdqqQhsd-GOc' alt='foto van het restaurant'></a></div>";
+                    htmlString += "</div>"
+              }
+          }
+              restaurantdata.insertAdjacentHTML("beforeend", htmlString) ;
 
-    restaurant.insertAdjacentHTML('beforeend', htmlString) ;
-
-        } else {
-          console.log('ERROR');
-        }
-      }
+                } else {
+                  console.log("ERROR");
+                }
+              };
       xhr.onerror = function() {
-        console.log('ERROR');
-      }
+        console.log("ERROR");
+      };
       xhr.send();
     };
 
@@ -86,15 +47,10 @@ var restaurant = document.getElementById("restaurantdata");
       return `Restaurant with id: ${this.id}`;
     };
 
-  };
+  }
 
-  var ww1 = new Restaurants(1, document.querySelector('.sidebar'));
+  var ww1 = new Restaurants(1, document.querySelector(".sidebar"));
   ww1.loadData();
   console.log(ww1.toString());
 
 })();
-*/
-
-
-
-
